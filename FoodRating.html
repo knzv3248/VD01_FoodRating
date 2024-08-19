@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Мой список рецептов</title>
+    <style>
+        /* Задаём шрифт параграфов текста страницы */
+        p {
+            font-family: Segoe Print, sans-serif;
+            font-size: 26px;
+        }
+        /* Задаём шрифт заголовкв h1 */
+        h1 {
+            font-family: Arial, sans-serif;
+            font-size: 26px;
+            text-decoration: underline; /* Подчеркивание */
+            margin-left: 500px;        /* Отступ слева на 500 пикселей */
+        }
+        /*
+        А можно так: Задаём шрифт заголовкв h1
+        Тогда в body пишем <h1 class="styled-heading">...</h1>
+        */
+        .styled-heading {
+            font-family: Arial, sans-serif;
+            font-size: 26px;
+            text-decoration: underline; /* Подчеркивание */
+            margin-left: 100px;        /* Отступ слева на 100 пикселей */
+        }
+        table {
+<!--            width: 100%; /* Ширина таблицы. Растягивает таблицу на весь экран. */-->
+            border-collapse: collapse; /* Объединяем границы */
+        }
+        th, td {
+            border: 4px solid #999; /* Граница ячеек */
+<!--            border: 2px solid #ddd; /* Граница ячеек */-->
+
+            padding: 8px; /* Отступ внутри ячеек */
+            text-align: left; /* Выравнивание текста влево */
+        }
+        th {
+            font-family: Segoe Print, sans-serif;
+            font-size: 20px;
+            text-align: center;
+            background-color: #f2f2f2; /* Цвет фона для заголовков */
+            color: #933; /* Цвет шрифта для заголовков. Было #333 */
+        }
+        td {
+            color: #111; /* Цвет шрифта для ячеек */
+        }
+        .no_double {border-collapse: collapse;}
+        .col-width-1 {
+            width: 350px; /* Ширина колонки */
+        }
+        .col-width-2 {
+            width: 250px; /* Ширина колонки */
+        }
+        .col-width-3 {
+            width: 400px; /* Ширина колонки */
+        }
+        .col-width-4 {
+            width: 350px; /* Ширина колонки */
+        }
+         .col1 {
+            font-family: Times New Roman, sans-serif; /* Шрифт для второй колонки */
+            font-size: 22px;
+            text-align: left; /* Выравнивание текста по центру */
+        }
+         .col2 {
+            font-family: Segoe Print, sans-serif; /* Шрифт для второй колонки */
+            font-size: 26px;
+            text-align: center; /* Выравнивание текста по центру */
+        }
+         .col3 {
+            font-family: Calibri, sans-serif; /* Шрифт для второй колонки */
+            font-size: 22px;
+            text-align: lef; /* Выравнивание текста по левому краю */
+        }
+
+        .col4 img {
+            display: block;
+            margin: 0 auto; /* Центрирование изображения */
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+<!--         Далаем шрифт курсивом -->
+        <h1> <em>Список рецептов</em></h1>
+<!--
+        А можно и так
+        <h1 class="styled-heading"> <em> Список рецептов</em></h1>
+-->
+	    <p>
+            На этой странице приведены мои любимые рецепты. <br> Но степень любви бывает разная.
+            <br>На этой странице использованы рецепты с сайта "https://povar.ru".
+        </p>
+<!--        <table bgcolor="lightgray" width="1500px" border="1">-->
+        <table class="no_double">
+            <tr>
+		        <th class="col-width-1">Название блюда</th>
+		        <th class="col-width-2">Моя оценка от 1 до 10</th>
+		        <th class="col-width-3">Ссылка на рецепт</th>
+                <th class="col-width-4">Фото блюда</th>
+	        </tr>
+            <tr>
+		        <td class="col1">Салат Цезарь с курицей и сухариками</td>
+		        <td class="col2">10</td>
+		        <td class="col3">
+                    <a href="https://povar.ru/recipes/salat_cezar_s_kuricei_i_suharikami-304.html">https://povar.ru/recipes/salat_cezar_s_kuricei_i_suharikami-304.html</a>
+                </td>
+                <td class="col4">
+                    <img src="https://img.povar.ru/main-micro/59/08/a3/3c/salat_cezar_s_kuricei_i_suharikami-288738.JPG"
+                         width = "300px">
+                </td>
+	        </tr>
+            <tr>
+		        <td class="col1">Борщ со свеклой</td>
+		        <td class="col2">8</td>
+		        <td class="col3">
+                    <a href="https://www.povarenok.ru/recipes/show/25436/">https://www.povarenok.ru/recipes/show/25436/</a>
+                </td>
+                <td class="col4">
+                    <img src="https://www.povarenok.ru/data/cache/2013jul/18/54/474896_84863-710x550x.jpg"
+                         width = "300px">
+                </td>
+                <tr>
+		        <td class="col1">Канапе с ветчиной и сыром</td>
+		        <td class="col2">5</td>
+		        <td class="col3">
+                    <a href="https://povar.ru/recipes/kanape_s_vetchinoi_i_syrom-28995.html">https://povar.ru/recipes/kanape_s_vetchinoi_i_syrom-28995.html</a>
+                </td>
+                <td class="col4">
+                    <img src="https://img.povar.ru/main-micro/bf/d9/0d/0c/kanape_s_vetchinoi_i_sirom-182129.jpg"
+                         width = "300px">
+                </td>
+            <tr>
+		        <td class="col1">Стейк классический</td>
+		        <td class="col2">8</td>
+		        <td class="col3">
+                    <a href="https://povar.ru/recipes/steik_klassicheskii-47118.html">https://povar.ru/recipes/steik_klassicheskii-47118.html</a>
+                </td>
+                <td class="col4">
+                    <img src="https://img.povar.ru/main/9c/6c/fe/e8/steik_klassicheskii-332240.JPG"
+                         width = "300px">
+                </td>
+            <tr>
+		        <td class="col1">Банановый пудинг в микроволновке</td>
+		        <td class="col2">7</td>
+		        <td class="col3">
+                    <a href="https://povar.ru/recipes/bananovyi_puding_v_mikrovolnovke-72593.html">https://povar.ru/recipes/bananovyi_puding_v_mikrovolnovke-72593.html</a>
+                </td>
+                <td class="col4">
+                    <img src="https://img.povar.ru/main/03/63/93/cd/bananovii_puding_v_mikrovolnovke-542636.JPG"
+                         width = "300px">
+                </td>
+	        </tr>
+        </table>
+    </div>
+</body>
+</html>
